@@ -1,0 +1,13 @@
+class Solution:
+    def isUgly(self, n: int) -> bool:
+        if n<=0:
+            return False
+        for i in [5,3,2]:
+            while n%i==0:
+                n=n//i
+        return n==1
+s1=Solution()
+if s1.isUgly(24):
+    print("It's an ugly number")
+else:
+    print("It's not an ugly number")
